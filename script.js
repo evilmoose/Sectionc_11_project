@@ -23,12 +23,20 @@ input.addEventListener('keyup', () => {
 
 });// Call searchHandler( e )
 
+suggestions.addEventListener('click', useSuggestion);
+
 function displaySuggestions( arr ) {
 	const results = arr.map( (li) => {
 		return `<li>${li}</li>`;
 	});
 
-	suggestions.innerHTML = `<ul>${results}</ul>`;
+	suggestions.innerHTML = `<ul>${results.join('')}</ul>`;
 }
 
-//suggestions.addEventListener('click', useSuggestion);
+function useSuggestion( event ) {
+	const key = event.target;
+	input.value = key.innerHTML;
+	suggestions.innerHTML = '';
+}
+
+
