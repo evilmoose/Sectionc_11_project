@@ -13,12 +13,16 @@ input.addEventListener('keyup', () => {
 	let results = [];
 	let key = input.value;
 
-	if ( key.length ) {
+	if ( key.length && key != '') {
 		results = fruit.filter( (term) => {
 			return term.toLowerCase().includes( key.toLowerCase());
 		});
 
 		displaySuggestions(results);
+	}
+	else{
+		const target = document.querySelector('#listContainer');
+    	target.style.display = 'none';
 	}
 
 });// Call searchHandler( e )
@@ -30,7 +34,7 @@ function displaySuggestions( arr ) {
 		return `<li>${li}</li>`;
 	});
 
-	suggestions.innerHTML = `<ul>${results.join('')}</ul>`;
+	suggestions.innerHTML = `<ul id="listContainer">${results.join('')}</ul>`;
 }
 
 function useSuggestion( event ) {

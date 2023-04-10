@@ -24,7 +24,7 @@ input {
 }
 
 .search-container {
-  width: 300px;
+  width: 320px;
   position: relative;
 }
 .search-container input,
@@ -33,7 +33,7 @@ input {
 }
 .search-container input {
   padding: 10px 5px;
-  width: 280px;
+  width: 300px;
   border: none;
   outline: none;
   background-color: white;
@@ -47,7 +47,7 @@ ul {
   margin: 0;
   padding: 0;
   background-color: white;
-  width: 290px;
+  width: 310px;
   max-height: 200px;
   overflow-y: auto;
   position: absolute;
